@@ -1,0 +1,74 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+.custom-slider {
+   &-outer {
+   }
+   &-inner {
+   }
+   &-wrap {
+   }
+   &-btns {
+      &--prev {
+      }
+      &--next {
+      }
+      &:hover {
+         svg {
+            stroke: gray;
+         }
+      }
+      &.inactive {
+         pointer-events: none;
+         opacity: 0.5;
+      }
+   }
+   &-track {
+      overflow-x: hidden;
+   }
+   &-slides-wrap {
+      list-style: none;
+      white-space: nowrap;
+      transform: translateX(0);
+      transition: transform 0.5s ease;
+   }
+   &-slide {
+      display: inline-block;
+      padding: 0 10px;
+   }
+   &-slide-inner {
+      background-color: #fff;
+      padding: 5px;
+   }
+   &-slide-img {
+      position: relative;
+      padding-top: 56.25%;
+      overflow: hidden;
+      img {
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         position: absolute;
+      }
+   }
+   &-slide-text {
+      text-align: center;
+      font-weight: 500;
+   }
+   &-pagi {
+      list-style: none;
+      li {
+         width: 10px;
+         height: 10px;
+         border-radius: 50%;
+         opacity: 0.5;
+         background-color: #fff;
+         transition: opacity 0.5s ease;
+         &.active {
+            opacity: 1;
+         }
+      }
+   }
+}
